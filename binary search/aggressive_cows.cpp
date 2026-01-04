@@ -1,6 +1,6 @@
 class Solution {
   public:
-    bool noOfCows(vector<int>& arr,int dist,int cows){
+    bool canWePlace(vector<int>& arr,int dist,int cows){
         int n=arr.size();
         int count=1,last=arr[0];
         for(int i=1;i<n;i++){
@@ -20,7 +20,7 @@ class Solution {
         int ans=-1;
         while(low<=high){
             int mid=(high-low)/2+low;
-            if(noOfCows(arr,mid,cows)){
+            if(canWePlace(arr,mid,cows)){
                 ans=mid;
                 low=mid+1;
             } else high=mid-1;
