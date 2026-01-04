@@ -16,7 +16,7 @@ class Solution {
         int n=arr.size();
         sort(arr.begin(),arr.end());
         int low=1;
-        int high=*max_element(arr.begin(),arr.end())-*min_element(arr.begin(),arr.end());
+        int high=arr[n-1]-arr[0];
         int ans=-1;
         while(low<=high){
             int mid=(high-low)/2+low;
